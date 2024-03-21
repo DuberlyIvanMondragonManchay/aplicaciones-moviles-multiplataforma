@@ -1,0 +1,92 @@
+//------------------------EJERCICIO 01-------------------------
+class MarvelHeroes {
+  String nombrePila;
+  String nombrePersonaje;
+  
+  MarvelHeroes({required this.nombrePila,required this.nombrePersonaje});
+    
+    String mensageHeroe(){
+    return 'Hola, mi nombre es: $nombrePila pero me conocen como tu amigable vecino $nombrePersonaje';
+  }
+  
+}
+
+void main () {
+  MarvelHeroes  spiderman = new MarvelHeroes(nombrePila:"PETER",nombrePersonaje:"SPIDER MAN");
+  print(spiderman.mensageHeroe());
+}
+
+
+//-------------EJERCICIO 2---------------
+// Definición de la clase DCHeroes
+class DCHeroes {
+  String realName;
+  String heroName;
+
+  // Constructor con nombre que se llama fromDCJson
+  DCHeroes.fromDCJson({String realName = 'No tiene nombre', String heroName = 'No tiene alias'})
+      : realName = realName,
+        heroName = heroName;
+
+  void introduceYourself() {
+    print('Hola, mi nombre es $realName pero me conocen como el caballero de la noche $heroName™');
+  }
+}
+void main() {
+  
+//-------------EJERCICIO 2---------------
+  DCHeroes batman = DCHeroes.fromDCJson(realName: 'BRUCE WAYNE', heroName: 'BATMAN');
+
+  // Llamar al método introduceYourself()
+  batman.introduceYourself();
+}
+
+//----------------EJERCICIO 3 PARA LA CLASE DE MarvelHeroes-----------------------
+class MarvelHeroes {
+  String nombrePila;
+  String nombrePersonaje;
+  
+  // Constructor con parámetros
+  MarvelHeroes({required this.nombrePila, required this.nombrePersonaje});
+  
+  // Constructor adicional con diferentes parámetros
+  MarvelHeroes.fromAlias(String alias)
+      : nombrePila = 'Desconocido', // Inicializando nombrePila
+        nombrePersonaje = alias;    // Inicializando nombrePersonaje
+    
+  String mensajeHeroe() {
+    return 'Hola, mi nombre es: $nombrePila pero me conocen como tu amigable vecino $nombrePersonaje';
+  }
+}
+
+void main() {
+  // Crear un objeto utilizando el constructor original
+  MarvelHeroes spiderman = MarvelHeroes(nombrePila: "PETER", nombrePersonaje: "SPIDER MAN");
+  print(spiderman.mensajeHeroe());
+
+  // Crear un objeto utilizando el constructor adicional
+  MarvelHeroes ironman = MarvelHeroes.fromAlias("IRON MAN");
+  print(ironman.mensajeHeroe());
+}
+
+
+//----------------EJERCICIO 3 PARA LA CLASE DE DCHeroes-----------------------
+class DCHeroes {
+  String realName;
+  String heroName;
+
+  DCHeroes.fromDCJson({String realName = 'No tiene nombre', String heroName = 'No tiene alias'})
+      : realName = realName,
+        heroName = heroName;
+
+  void introduceYourself() {
+    print('Hola, mi nombre es $realName pero me conocen como el caballero de la noche $heroName™');
+  }
+}
+
+void main() {
+
+  DCHeroes batman = DCHeroes.fromDCJson(realName: 'BRUCE WAYNE', heroName: 'BATMAN');
+
+  batman.introduceYourself();
+}
