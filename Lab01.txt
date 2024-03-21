@@ -1,0 +1,65 @@
+void main() {
+  //-------------Ejercicio 1 -------------
+  print('Hola mundo');
+  
+  //------------- Ejercicio 2 -------------
+  //Ejemplo 1 
+  String nombre1 = "Duberly";
+  //Ejemplo 2
+  var nombre2 = "Ivan";
+  //Ejemplo 3
+  String saludo = 'Hola, $nombre1';
+ //Ejemplo 4
+  String despedida = 'Adios, $nombre2';
+  
+  print(saludo);
+  print(despedida);
+  //-------------Ejercicio 3-------------
+    //Ejemplo para numeros enteros
+  int edad = 19;
+  //Ejmplo para números decimales
+  double altura = 1.80;
+  print('Edad: $edad' );
+  print('Altura: $altura');
+  
+  //-------------Ejercicio 4 ------------
+
+  List<int> numeros = [1, 2, 3, 4, 5];
+  
+
+  List<String> colores = ['rojo', 'verde', 'azul'];
+
+  print("Primer elemento de la lista números: ${numeros.first}");
+
+  print("Segundo elemento de la lista de colores: ${colores[1]}");
+
+  numeros.add(6);
+  colores.add('amarillo');
+
+
+  print("Elementos de la lista números:");
+  for (var numero in numeros) {
+    print(numero);
+  }
+
+  print("Elementos de la lista de colores:");
+  for (var color in colores) {
+    print(color);
+  }
+  
+  //-------------Ejercicio 5 ------------
+   Map persona = {
+    'nombre': 'Juan',
+    'edad': 30,
+    'ciudad': "Madrid"
+  };
+  print(persona['nombre']); //Imprime Juan
+  print(persona['edad']); //Imprime 30
+  persona['edad'] = 35;
+  print(persona['edad']); //Imprime 35
+  persona.addAll({'profesión':'Ingeniero'});
+  print(persona['profesión']); //Imprime ingeniero
+  persona.forEach((clave, valor) {
+  print('$clave: $valor');
+  });
+}
